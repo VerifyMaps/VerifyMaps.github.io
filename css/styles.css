@@ -121,12 +121,11 @@ html.q-lock,html.q-lock body{overflow:hidden}
 .st svg{display:block;width:100%;height:100%}
 .st .bg{fill:var(--mute);opacity:.3}
 .st .fl{position:absolute;inset:0;fill:#fbbc04;clip-path:inset(0 100% 0 0)}
-.rv.in .st .fl{clip-path:inset(0 0 0 0);transition:clip-path .22s ease-out}
-.st:nth-child(1) .fl{transition-delay:.25s}
-.st:nth-child(2) .fl{transition-delay:.38s}
-.st:nth-child(3) .fl{transition-delay:.51s}
-.st:nth-child(4) .fl{transition-delay:.64s}
-.st:nth-child(5) .fl{transition-delay:.77s}
+.rv.in .st .fl{clip-path:inset(0 0 0 0);transition:clip-path .3s ease-out .55s}
+.rv.in .st:nth-child(2) .fl{transition-delay:.69s}
+.rv.in .st:nth-child(3) .fl{transition-delay:.83s}
+.rv.in .st:nth-child(4) .fl{transition-delay:.97s}
+.rv.in .st:nth-child(5) .fl{transition-delay:1.11s}
 html:not(.js) .st .fl{clip-path:none}
 @media (prefers-reduced-motion:reduce){.st .fl{clip-path:inset(0 0 0 0);transition:none}}
 
