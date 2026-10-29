@@ -93,16 +93,51 @@ h1::after,h2::after{animation:none}
 .vf{animation:none;transform:none}
 .js .rv{opacity:1;transform:none;transition:none}
 }
+
+.q-s{padding:26px 0;border-top:1px solid var(--line)}
+.q-h{display:flex;align-items:center;gap:12px;font-size:18px;font-weight:500;letter-spacing:-.01em;margin:0 0 18px}
+.q-bd{flex:none;width:22px;height:22px;border:1.5px solid var(--line);border-radius:50%;position:relative;transition:background .3s,border-color .3s}
+.q-bd::after{content:"";position:absolute;left:6.5px;top:3.5px;width:6px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg) scale(0);transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+.q-done .q-bd{background:#1a73e8;border-color:#1a73e8}
+.q-done .q-bd::after{transform:rotate(45deg) scale(1)}
+.q-f{margin:0 0 18px}
+.q-f>label,.q-f>.q-l{display:block;font-size:14px;font-weight:500;margin-bottom:6px}
+.q-f small{display:block;font-weight:400;color:var(--mute);font-size:13px}
+#q-app input,#q-app textarea{width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:2px;padding:11px 12px;transition:border-color .2s}
+#q-app textarea{min-height:84px;resize:vertical}
+#q-app input:focus,#q-app textarea:focus{border-color:var(--ink);outline:0}
+#q-app input:focus-visible,#q-app textarea:focus-visible,.q-ch:focus-visible{outline:2px solid #1a73e8;outline-offset:2px}
+.q-chs{display:flex;flex-wrap:wrap;gap:8px}
+.q-ch{font:inherit;font-size:14px;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:2px;padding:8px 13px;cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .15s}
+.q-ch:active{transform:scale(.96)}
+.q-ch[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.q-end{padding-top:26px;border-top:1px solid var(--line)}
+@media (prefers-reduced-motion:reduce){.q-bd,.q-bd::after,.q-ch{transition:none}}
+
+html.q-lock,html.q-lock body{overflow:hidden}
+.q-sheet{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;background:var(--bg);transform:translateY(100%);visibility:hidden;transition:transform .6s cubic-bezier(.22,.61,.36,1),visibility 0s linear .6s}
+.q-sheet.on{transform:none;visibility:visible;transition-delay:0s}
+.q-top{flex:none;padding-top:env(safe-area-inset-top,0px);border-bottom:1px solid var(--line);background:var(--bg)}
+.q-top .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.q-top b{font-weight:500;font-size:16px;letter-spacing:-.01em}
+.q-x{font:inherit;font-size:14px;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:2px;padding:7px 14px;cursor:pointer}
+.q-x:focus-visible{outline:2px solid #1a73e8;outline-offset:2px}
+.q-body{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+.q-body .wrap{padding-bottom:24px}
+.q-foot{flex:none;border-top:1px solid var(--line);background:var(--bg);padding:12px 0 calc(12px + env(safe-area-inset-bottom,0px))}
+.q-foot .btn{margin:0;display:block;text-align:center;width:100%}
+.q-foot p{margin:8px 0 0;font-size:12.5px;color:var(--mute)}
+@media (prefers-reduced-motion:reduce){.q-sheet{transition:none}}
 </style>
 </head>
 <body>
-<header class="top" id="top"><div class="wrap"><b>Lucio Veneziale</b><a class="cta" href="https://wa.me/5491123165367?text=Hola%20Lucio%2C%20quiero%20que%20mi%20negocio%20aparezca%20en%20Google%20Maps.%20Mi%20negocio%20es%3A%20">Escribime</a></div><div class="bar" id="bar"></div></header>
+<header class="top" id="top"><div class="wrap"><b>Lucio Veneziale</b><a class="cta" href="#relevamiento" data-q>Empezar</a></div><div class="bar" id="bar"></div></header>
 
 <section class="slide hero" style="border-top:0"><div class="wrap">
 <p class="eyebrow rv">Lucio Veneziale · Perfiles de Google Maps</p>
 <h1 class="rv" style="--d:100ms">Tu negocio, visible en Google <span class="nw">Maps.<svg class="vf" viewBox="0 0 24 24" role="img" aria-label="Perfil verificado"><path fill="#1a73e8" d="M12 1.6l2.5 1.7 3-.2 1.4 2.7 2.7 1.4-.2 3 1.7 2.5-1.7 2.5.2 3-2.7 1.4-1.4 2.7-3-.2-2.5 1.7-2.5-1.7-3 .2-1.4-2.7-2.7-1.4.2-3L1.6 12l1.7-2.5-.2-3 2.7-1.4 1.4-2.7 3 .2z"/><path fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M7.6 12.3l3 3 5.8-6.2"/></svg></span></h1>
 <p class="lead rv" style="--d:200ms">Dejo tu perfil de Google creado, completo y verificado, para que quien te busca te encuentre y te elija.</p>
-<div class="rv" style="--d:300ms"><a class="btn" href="https://wa.me/5491123165367?text=Hola%20Lucio%2C%20quiero%20que%20mi%20negocio%20aparezca%20en%20Google%20Maps.%20Mi%20negocio%20es%3A%20">Escribime por WhatsApp</a><a class="btn ghost" href="mailto:luvenezialee@gmail.com">Email</a></div>
+<div class="rv" style="--d:300ms"><a class="btn" href="#relevamiento" data-q>Contame de tu negocio</a></div>
 <div class="hint rv" style="--d:500ms"><i></i>Deslizá</div>
 </div></section>
 
@@ -149,7 +184,7 @@ h1::after,h2::after{animation:none}
 <p class="eyebrow rv">03 · El proceso</p>
 <h2 class="rv" style="--d:80ms">Cómo trabajamos.</h2>
 <div class="grid g3" data-stagger>
-<div class="cell rv"><div class="n">01</div><h3>Me escribís</h3><p class="mute">Me pasás los datos y las fotos que tengas.</p></div>
+<div class="cell rv"><div class="n">01</div><h3>Completás los datos</h3><p class="mute">Respondés el cuestionario y se envía por WhatsApp. Las fotos me las mandás en el chat.</p></div>
 <div class="cell rv"><div class="n">02</div><h3>Administrador</h3><p class="mute">Me sumás a la ficha. Nunca pido tu contraseña.</p></div>
 <div class="cell rv"><div class="n">03</div><h3>Preparo todo</h3><p class="mute">En 48 a 72 horas hábiles.</p></div>
 <div class="cell rv"><div class="n">04</div><h3>Verificamos</h3><p class="mute">Te guío por videollamada o audios y te entrego el checklist.</p></div>
@@ -173,19 +208,32 @@ h1::after,h2::after{animation:none}
 </ul>
 </div></section>
 
-<section class="slide"><div class="wrap">
-<p class="eyebrow rv">05 · Contacto</p>
-<h2 class="rv" style="--d:80ms">Hablemos.</h2>
-<div class="rv" style="--d:150ms">
+<section id="empezar"><div class="wrap">
+<p class="eyebrow rv">05 · Empezamos</p>
+<h2 class="rv" style="--d:80ms">Contame de tu negocio.</h2>
+<p class="mute rv" style="--d:150ms;max-width:520px">Respondé unas preguntas y me llegan por WhatsApp con todo ordenado. Si preferís hablar directo, escribime.</p>
+<div class="rv" style="--d:250ms"><a class="btn" href="#relevamiento" data-q>Contame de tu negocio</a><a class="btn ghost" href="https://wa.me/5491123165367?text=Hola%20Lucio%2C%20quiero%20que%20mi%20negocio%20aparezca%20en%20Google%20Maps.">Escribime por WhatsApp</a></div>
+<div class="rv" style="margin-top:40px;--d:300ms">
 <div class="line"><span>Nombre</span><span>Lucio Veneziale</span></div>
-<div class="line"><span>WhatsApp</span><span><a class="plain" href="https://wa.me/5491123165367?text=Hola%20Lucio%2C%20quiero%20que%20mi%20negocio%20aparezca%20en%20Google%20Maps.%20Mi%20negocio%20es%3A%20">11 2316-5367</a></span></div>
+<div class="line"><span>WhatsApp</span><span><a class="plain" href="https://wa.me/5491123165367">11 2316-5367</a></span></div>
 <div class="line"><span>Email</span><span><a class="plain" href="mailto:luvenezialee@gmail.com">luvenezialee@gmail.com</a></span></div>
 </div>
-<p class="mute rv" style="margin-top:24px;--d:250ms">Pasame el nombre del negocio y la dirección, y arrancamos.</p>
-<div class="rv" style="--d:300ms"><a class="btn" href="https://wa.me/5491123165367?text=Hola%20Lucio%2C%20quiero%20que%20mi%20negocio%20aparezca%20en%20Google%20Maps.%20Mi%20negocio%20es%3A%20">Escribime por WhatsApp</a></div>
 </div></section>
 
 <footer><div class="wrap">© 2026 Lucio Veneziale. Todos los derechos reservados.</div></footer>
+
+<div class="q-sheet" id="q-sheet" role="dialog" aria-modal="true" aria-labelledby="q-title" aria-hidden="true">
+<div class="q-top"><div class="wrap"><b id="q-title">Contame de tu negocio</b><button type="button" class="q-x" id="q-x">Cerrar</button></div></div>
+<div class="q-body"><div class="wrap">
+<p class="mute" style="margin:24px 0 8px;max-width:480px">Respondé lo que sepas, de arriba hacia abajo. Lo que no sepas, dejalo vacío.</p>
+<div id="q-app"></div>
+</div></div>
+<div class="q-foot"><div class="wrap">
+<a class="btn" id="q-send" href="#relevamiento" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+<p id="q-msg">Se abre WhatsApp con tus datos ya escritos. Las fotos me las mandás por ese chat.</p>
+</div></div>
+</div>
+
 
 <script>
 (function(){
@@ -209,6 +257,134 @@ function upd(){
 }
 window.addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});
 upd();
+})();
+</script>
+<script>
+(function(){
+var WA="5491123165367";
+var D=[
+{t:"Tu negocio",f:[
+{k:"nombre",l:"Nombre exacto",h:"Como figura en el cartel, sin eslóganes ni teléfonos",r:1},
+{k:"rubro",l:"Rubro principal",h:"Por ejemplo: peluquería, taller, veterinaria",r:1},
+{k:"otras",l:"Otras categorías o servicios",h:"Hasta 2 o 3"},
+{k:"tipo",l:"Tipo de atención",c:["Local al público","A domicilio","Ambas"]},
+{k:"desde",l:"Abierto desde",h:"Mes y año"}]},
+{t:"Ubicación",f:[
+{k:"dir",l:"Dirección completa",h:"Calle, número, piso o local, barrio, localidad y código postal",r:1},
+{k:"ref",l:"Referencias para llegar",h:"Entre calles, frente a, dentro de una galería"},
+{k:"zona",l:"Zona que cubrís",h:"Solo si vas a domicilio"}]},
+{t:"Contacto",f:[
+{k:"tel",l:"Teléfono del negocio",h:"Con característica",r:1},
+{k:"wa",l:"WhatsApp del negocio"},
+{k:"web",l:"Sitio web o redes"},
+{k:"mail",l:"Email"}]},
+{t:"Horarios",f:[
+{k:"hor",l:"Horarios de cada día",h:"Si cerrás al mediodía, anotá los dos tramos",a:1},
+{k:"fer",l:"Feriados",c:["Abro","Cierro","Depende del feriado"]},
+{k:"esp",l:"Fechas especiales",h:"Navidad, Año Nuevo, Día de la Madre, Hot Sale",a:1},
+{k:"cie",l:"Cierres próximos",h:"Vacaciones, obras, balance"}]},
+{t:"Qué ofrecés",f:[
+{k:"desc",l:"Qué hacés y qué te diferencia",h:"Dos o tres frases",a:1},
+{k:"busca",l:"Cómo te buscan tus clientes",h:"Las palabras que usan"},
+{k:"serv",l:"Servicios o productos principales",h:"Con precio o rango",a:1}]},
+{t:"Atributos",f:[
+{k:"acc",l:"Accesibilidad",m:["Entrada accesible","Baño accesible","Estacionamiento accesible","Rampa o ascensor"]},
+{k:"ins",l:"Instalaciones",m:["Wi-Fi","Baño para clientes","Estacionamiento","Aire acondicionado","Espacio al aire libre","Acepta mascotas"]},
+{k:"aten",l:"Atención",m:["Con turno","Sin turno","Delivery","Retiro en el local","A domicilio"]},
+{k:"pago",l:"Medios de pago",m:["Efectivo","Débito","Crédito","Transferencia","QR o Mercado Pago"]}]},
+{t:"Fotos",f:[
+{k:"fot",l:"Lo que ya tenés",h:"Alcanzan unas 6 fotos buenas. Las mandás por el chat.",m:["Logo","Fachada","Interior","Equipo","Productos o trabajos","Entrada","Video corto"]}]},
+{t:"Verificación",f:[
+{k:"gm",l:"Tu Gmail",h:"Va a ser el dueño de la ficha"},
+{k:"llam",l:"Podés recibir una llamada o SMS al verificar",c:["Sí","No"]},
+{k:"vid",l:"Podés hacer una videollamada mostrando el local",c:["Sí","No"]},
+{k:"cart",l:"El cartel coincide con el nombre",c:["Sí","No","No sé"]},
+{k:"comp",l:"Comprobante a nombre del negocio",h:"Factura, habilitación, constancia de ARCA o alquiler"}]},
+{t:"Algo más",f:[{k:"obs",l:"Algo más que quieras contarme",a:1}]}
+];
+var K="vm-relevamiento-v1",S={};
+try{S=JSON.parse(localStorage.getItem(K)||"{}")||{}}catch(e){S={}}
+function sv(){try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}}
+function esc(x){return String(x).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;")}
+function val(f){var v=S[f.k];return Array.isArray(v)?v.join(", "):String(v||"").trim()}
+var h="";
+D.forEach(function(s,i){
+h+='<div class="q-s" data-s="'+i+'"><div class="q-h"><span class="q-bd"></span>'+s.t+'</div>';
+s.f.forEach(function(f){
+var hint=f.h?'<small>'+f.h+'</small>':"";
+if(f.c||f.m){
+h+='<div class="q-f"><span class="q-l">'+f.l+hint+'</span><div class="q-chs">';
+(f.c||f.m).forEach(function(o){h+='<button type="button" class="q-ch" data-k="'+f.k+'" data-v="'+esc(o)+'" data-m="'+(f.m?1:0)+'" aria-pressed="false">'+o+'</button>'});
+h+='</div></div>';
+}else{
+h+='<div class="q-f"><label for="q-'+f.k+'">'+f.l+hint+'</label>'+(f.a?'<textarea id="q-'+f.k+'" data-k="'+f.k+'"></textarea>':'<input id="q-'+f.k+'" data-k="'+f.k+'" autocomplete="off">')+'</div>';
+}});
+h+='</div>';
+});
+var app=document.getElementById("q-app");app.innerHTML=h;
+Array.prototype.forEach.call(app.querySelectorAll("input,textarea"),function(e){e.value=S[e.dataset.k]||""});
+var send=document.getElementById("q-send"),msg=document.getElementById("q-msg"),base=msg.textContent;
+function build(){
+var t="Hola Lucio, quiero que mi negocio aparezca en Google Maps. Estos son los datos de mi negocio:\n";
+D.forEach(function(s){
+var l="";
+s.f.forEach(function(f){var x=val(f);if(x)l+="• "+f.l+": "+x+"\n"});
+if(l)t+="\n*"+s.t+"*\n"+l;
+});
+return t+"\nTe mando las fotos por acá.";
+}
+function missing(){var m=[];D.forEach(function(s){s.f.forEach(function(f){if(f.r&&!val(f))m.push(f)})});return m}
+function ui(){
+Array.prototype.forEach.call(app.querySelectorAll(".q-ch"),function(b){
+var v=S[b.dataset.k];b.setAttribute("aria-pressed",String(b.dataset.m==="1"?(v||[]).indexOf(b.dataset.v)>-1:v===b.dataset.v))});
+D.forEach(function(s,i){
+var req=s.f.filter(function(f){return f.r}),done=req.length?req.every(function(f){return val(f)}):s.f.some(function(f){return val(f)});
+app.querySelector('[data-s="'+i+'"]').classList.toggle("q-done",done);
+});
+send.href="https://wa.me/"+WA+"?text="+encodeURIComponent(build());
+}
+app.addEventListener("input",function(e){var k=e.target.dataset.k;if(k){S[k]=e.target.value;sv();ui()}});
+app.addEventListener("click",function(e){
+var b=e.target.closest(".q-ch");if(!b)return;
+var k=b.dataset.k,v=b.dataset.v;
+if(b.dataset.m==="1"){var a=S[k]||[],j=a.indexOf(v);if(j>-1)a.splice(j,1);else a.push(v);S[k]=a}
+else S[k]=(S[k]===v?"":v);
+sv();ui();
+});
+send.addEventListener("click",function(e){
+var m=missing();
+if(m.length){
+e.preventDefault();
+msg.textContent="Antes de enviar, completá: "+m.map(function(f){return f.l.toLowerCase()}).join(", ")+".";
+var el=document.getElementById("q-"+m[0].k);if(el){el.scrollIntoView({block:"center"});el.focus({preventScroll:true})}
+}else{msg.textContent=base}
+});
+ui();
+})();
+</script>
+<script>
+(function(){
+var sh=document.getElementById("q-sheet"),opener=null;
+var bg=document.querySelectorAll("body>header,body>section,body>footer");
+function setBg(v){Array.prototype.forEach.call(bg,function(e){e.inert=v})}
+function open(el){
+if(sh.classList.contains("on"))return;
+opener=el||null;sh.classList.add("on");sh.setAttribute("aria-hidden","false");
+document.documentElement.classList.add("q-lock");setBg(true);
+try{history.pushState({q:1},"")}catch(e){}
+setTimeout(function(){document.getElementById("q-x").focus({preventScroll:true})},60);
+}
+function hide(){
+if(!sh.classList.contains("on"))return;
+sh.classList.remove("on");sh.setAttribute("aria-hidden","true");
+document.documentElement.classList.remove("q-lock");setBg(false);
+if(opener&&opener.focus)opener.focus({preventScroll:true});
+}
+function close(){if(history.state&&history.state.q){history.back()}else{hide()}}
+document.addEventListener("click",function(e){var a=e.target.closest("[data-q]");if(a){e.preventDefault();open(a)}});
+document.getElementById("q-x").addEventListener("click",close);
+document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
+window.addEventListener("popstate",hide);
 })();
 </script>
 </body>
