@@ -2,6 +2,8 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; style-src-attr 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; font-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; manifest-src 'none'; worker-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Tu negocio visible en Google Maps · Lucio Veneziale</title>
 <meta name="description" content="Dejo tu perfil de Google Maps creado, completo y verificado. Pago único de $49.999 (35 USD) por transferencia, sin mensualidades.">
@@ -11,124 +13,7 @@
 <meta property="og:description" content="Perfil de Google creado, completo y verificado. Pago único de $49.999 (35 USD) por transferencia.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%231a73e8' d='M12 1.6l2.5 1.7 3-.2 1.4 2.7 2.7 1.4-.2 3 1.7 2.5-1.7 2.5.2 3-2.7 1.4-1.4 2.7-3-.2-2.5 1.7-2.5-1.7-3 .2-1.4-2.7-2.7-1.4.2-3L1.6 12l1.7-2.5-.2-3 2.7-1.4 1.4-2.7 3 .2z'/%3E%3Cpath fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round' d='M7.6 12.3l3 3 5.8-6.2'/%3E%3C/svg%3E">
-<style>
-:root{--bg:#fafaf8;--ink:#111111;--mute:#6a6a66;--card:#ffffff;--line:#e2e2de;--soft:#f1f1ee;--glass:rgba(250,250,248,.72);
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d0d0c;--ink:#f1f1ee;--mute:#9a9a95;--card:#151514;--line:#272725;--soft:#121211;--glass:rgba(13,13,12,.72)}}
-:root[data-theme="dark"]{--bg:#0d0d0c;--ink:#f1f1ee;--mute:#9a9a95;--card:#151514;--line:#272725;--soft:#121211;--glass:rgba(13,13,12,.72)}
-html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:40}
-.wrap{max-width:760px;margin:0 auto;padding:0 24px}
-section{padding:clamp(56px,9vw,88px) 0;border-top:1px solid var(--line)}
-.slide{display:flex;align-items:center}
-.hero{min-height:calc(100svh - 52px);padding-top:32px}
-.slide>.wrap{width:100%}
-.sub{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:40px 0 14px}
-.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:0 0 20px}
-h1{font-size:clamp(36px,9vw,60px);line-height:1.06;font-weight:500;letter-spacing:-.03em;margin:0 0 20px}
-h2{font-size:clamp(24px,5.5vw,32px);line-height:1.2;font-weight:500;letter-spacing:-.02em;margin:0 0 28px}
-h1::after,h2::after{content:"_";content:"_" / "";margin-left:.06em;font-weight:400;animation:blink 1.1s steps(1) infinite}
-@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
-.nw{white-space:nowrap}
-.vf{width:.72em;height:.72em;vertical-align:-.04em;margin-left:.14em;transform:scale(0);animation:pop .7s cubic-bezier(.34,1.56,.64,1) .9s forwards}
-@keyframes pop{to{transform:scale(1)}}
-h3{font-size:16px;font-weight:600;margin:0 0 6px}
-p{margin:0 0 12px}
-.mute{color:var(--mute)}
-.lead{font-size:19px;color:var(--mute);max-width:520px}
-.btn{display:inline-block;background:var(--ink);color:var(--bg);text-decoration:none;font-size:15px;font-weight:500;padding:14px 24px;border-radius:2px;margin:8px 12px 0 0;transition:opacity .25s ease,transform .25s ease}
-.btn:hover{opacity:.82}
-.btn:active{transform:scale(.98)}
-.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
-.grid{display:grid;gap:0;border:1px solid var(--line);background:var(--card)}
-.g3{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
-.cell{padding:24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);margin:0 -1px -1px 0}
-.cell .n{font-size:12px;letter-spacing:.1em;color:var(--mute);margin-bottom:10px}
-ul.ck{list-style:none;padding:0;margin:0}
-ul.ck li{padding:14px 0;border-bottom:1px solid var(--line)}
-ul.ck li:first-child{border-top:1px solid var(--line)}
-.price{border:1px solid var(--ink);padding:40px 28px}
-.price .big{font-size:clamp(44px,12vw,76px);font-weight:500;letter-spacing:-.04em;line-height:1;margin:8px 0 16px}
-.price .big small{font-size:.4em;letter-spacing:-.02em;color:var(--mute);font-weight:400;white-space:nowrap}
-.line{padding:10px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;font-size:15px}
-.line span:first-child{color:var(--mute)}
-a.plain{color:var(--ink)}
-footer{padding:28px 0 44px;font-size:12px;color:var(--mute);border-top:1px solid var(--line)}
-
-/* barra superior: se ve al bajar */
-.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--glass);-webkit-backdrop-filter:saturate(180%) blur(18px);backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid transparent;opacity:0;transform:translateY(-100%);transition:opacity .4s ease,transform .5s cubic-bezier(.22,.61,.36,1),border-color .4s ease;pointer-events:none}
-.top.on{opacity:1;transform:none;border-bottom-color:var(--line);pointer-events:auto}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;height:52px}
-.top b{font-weight:500;font-size:14px;letter-spacing:-.01em}
-.top a.cta{font-size:13px;font-weight:500;text-decoration:none;color:var(--bg);background:var(--ink);padding:7px 14px;border-radius:2px}
-.bar{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--ink);transform-origin:0 50%;transform:scaleX(0)}
-
-/* pista de scroll */
-.hint{display:inline-flex;align-items:center;gap:10px;margin-top:56px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
-.hint i{display:block;width:1px;height:28px;background:var(--mute);transform-origin:50% 0;animation:drip 1.8s cubic-bezier(.6,0,.3,1) infinite}
-@keyframes drip{0%{transform:scaleY(0)}55%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);opacity:0}}
-
-/* antes / después */
-.ba{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,4vw,36px);align-items:start;margin-top:8px}
-.ba figure{margin:0}
-.chip{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:5px 12px;border:1px solid var(--line);color:var(--mute);margin-bottom:14px}
-.chip.ok{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.ba img{display:block;width:100%;height:auto;filter:drop-shadow(0 18px 30px rgba(0,0,0,.14))}
-.ba ul{list-style:none;padding:0;margin:18px 0 0;font-size:clamp(12.5px,3.3vw,14px);line-height:1.45;color:var(--mute)}
-.ba li{padding:6px 0 6px 22px;position:relative}
-.ba li::before{position:absolute;left:0;top:6px;font-weight:600;color:var(--mute);content:"\2715"}
-.ba .ok-l li::before{content:"\2713";color:var(--ink)}
-.ba .ok-l li{color:var(--ink)}
-
-/* aparición al hacer scroll */
-.js .rv{opacity:0;transform:translate3d(0,28px,0);transition:opacity 1s cubic-bezier(.22,.61,.36,1) var(--d,0ms),transform 1s cubic-bezier(.22,.61,.36,1) var(--d,0ms);will-change:opacity,transform}
-.js .rv.zoom{transform:translate3d(0,44px,0) scale(.965)}
-.js .rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){
-html{scroll-behavior:auto}
-h1::after,h2::after{animation:none}
-.hint i{animation:none}
-.vf{animation:none;transform:none}
-.js .rv{opacity:1;transform:none;transition:none}
-}
-
-.q-s{padding:26px 0;border-top:1px solid var(--line)}
-.q-h{display:flex;align-items:center;gap:12px;font-size:18px;font-weight:500;letter-spacing:-.01em;margin:0 0 18px}
-.q-bd{flex:none;width:22px;height:22px;border:1.5px solid var(--line);border-radius:50%;position:relative;transition:background .3s,border-color .3s}
-.q-bd::after{content:"";position:absolute;left:6.5px;top:3.5px;width:6px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg) scale(0);transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
-.q-done .q-bd{background:#1a73e8;border-color:#1a73e8}
-.q-done .q-bd::after{transform:rotate(45deg) scale(1)}
-.q-f{margin:0 0 18px}
-.q-f>label,.q-f>.q-l{display:block;font-size:14px;font-weight:500;margin-bottom:6px}
-.q-f small{display:block;font-weight:400;color:var(--mute);font-size:13px}
-#q-app input,#q-app textarea{width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:2px;padding:11px 12px;transition:border-color .2s}
-#q-app textarea{min-height:84px;resize:vertical}
-#q-app input:focus,#q-app textarea:focus{border-color:var(--ink);outline:0}
-#q-app input:focus-visible,#q-app textarea:focus-visible,.q-ch:focus-visible{outline:2px solid #1a73e8;outline-offset:2px}
-.q-chs{display:flex;flex-wrap:wrap;gap:8px}
-.q-ch{font:inherit;font-size:14px;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:2px;padding:8px 13px;cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .15s}
-.q-ch:active{transform:scale(.96)}
-.q-ch[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.q-end{padding-top:26px;border-top:1px solid var(--line)}
-@media (prefers-reduced-motion:reduce){.q-bd,.q-bd::after,.q-ch{transition:none}}
-
-html.q-lock,html.q-lock body{overflow:hidden}
-.q-sheet{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;background:var(--bg);transform:translateY(100%);visibility:hidden;transition:transform .6s cubic-bezier(.22,.61,.36,1),visibility 0s linear .6s}
-.q-sheet.on{transform:none;visibility:visible;transition-delay:0s}
-.q-top{flex:none;padding-top:env(safe-area-inset-top,0px);border-bottom:1px solid var(--line);background:var(--bg)}
-.q-top .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
-.q-top b{font-weight:500;font-size:16px;letter-spacing:-.01em}
-.q-x{font:inherit;font-size:14px;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:2px;padding:7px 14px;cursor:pointer}
-.q-x:focus-visible{outline:2px solid #1a73e8;outline-offset:2px}
-.q-body{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
-.q-body .wrap{padding-bottom:24px}
-.q-foot{flex:none;border-top:1px solid var(--line);background:var(--bg);padding:12px 0 calc(12px + env(safe-area-inset-bottom,0px))}
-.q-foot .btn{margin:0;display:block;text-align:center;width:100%}
-.q-foot p{margin:8px 0 0;font-size:12.5px;color:var(--mute)}
-@media (prefers-reduced-motion:reduce){.q-sheet{transition:none}}
-</style>
+<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <header class="top" id="top"><div class="wrap"><b>Lucio Veneziale</b><a class="cta" href="#relevamiento" data-q>Empezar</a></div><div class="bar" id="bar"></div></header>
@@ -226,166 +111,18 @@ html.q-lock,html.q-lock body{overflow:hidden}
 <div class="q-top"><div class="wrap"><b id="q-title">Contame de tu negocio</b><button type="button" class="q-x" id="q-x">Cerrar</button></div></div>
 <div class="q-body"><div class="wrap">
 <p class="mute" style="margin:24px 0 8px;max-width:480px">Respondé lo que sepas, de arriba hacia abajo. Lo que no sepas, dejalo vacío.</p>
+<p class="mute" style="margin:0 0 8px;max-width:480px;font-size:13px">Privacidad: este sitio no tiene servidor y no recibe tus respuestas. El borrador queda solo en esta pestaña (se borra al cerrarla o a las 2 horas) y al tocar «Enviar» los datos viajan a WhatsApp. Podés borrarlo cuando quieras desde el final del formulario.</p>
 <div id="q-app"></div>
 </div></div>
 <div class="q-foot"><div class="wrap">
-<a class="btn" id="q-send" href="#relevamiento" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+<a class="btn" id="q-send" href="#relevamiento" target="_blank" rel="noopener noreferrer">Enviar por WhatsApp</a>
 <p id="q-msg">Se abre WhatsApp con tus datos ya escritos. Las fotos me las mandás por ese chat.</p>
 </div></div>
 </div>
 
 
-<script>
-(function(){
-var d=document.documentElement;d.classList.add('js');
-document.querySelectorAll('[data-stagger]').forEach(function(g){
-  Array.prototype.forEach.call(g.querySelectorAll('.rv'),function(el,i){el.style.setProperty('--d',(i*90)+'ms')});
-});
-var items=document.querySelectorAll('.rv');
-if('IntersectionObserver' in window){
-  var io=new IntersectionObserver(function(es){
-    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
-  },{threshold:.15,rootMargin:'0px 0px -6% 0px'});
-  items.forEach(function(el){io.observe(el)});
-}else{items.forEach(function(el){el.classList.add('in')})}
-var top=document.getElementById('top'),bar=document.getElementById('bar'),tick=false;
-function upd(){
-  var y=window.scrollY||0,h=document.documentElement.scrollHeight-window.innerHeight;
-  top.classList.toggle('on',y>window.innerHeight*.5);
-  bar.style.transform='scaleX('+(h>0?Math.min(1,y/h):0)+')';
-  tick=false;
-}
-window.addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});
-upd();
-})();
-</script>
-<script>
-(function(){
-var WA="5491123165367";
-var D=[
-{t:"Tu negocio",f:[
-{k:"nombre",l:"Nombre exacto",h:"Como figura en el cartel, sin eslóganes ni teléfonos",r:1},
-{k:"rubro",l:"Rubro principal",h:"Por ejemplo: peluquería, taller, veterinaria",r:1},
-{k:"otras",l:"Otras categorías o servicios",h:"Hasta 2 o 3"},
-{k:"tipo",l:"Tipo de atención",c:["Local al público","A domicilio","Ambas"]},
-{k:"desde",l:"Abierto desde",h:"Mes y año"}]},
-{t:"Ubicación",f:[
-{k:"dir",l:"Dirección completa",h:"Calle, número, piso o local, barrio, localidad y código postal",r:1},
-{k:"ref",l:"Referencias para llegar",h:"Entre calles, frente a, dentro de una galería"},
-{k:"zona",l:"Zona que cubrís",h:"Solo si vas a domicilio"}]},
-{t:"Contacto",f:[
-{k:"tel",l:"Teléfono del negocio",h:"Con característica",r:1},
-{k:"wa",l:"WhatsApp del negocio"},
-{k:"web",l:"Sitio web o redes"},
-{k:"mail",l:"Email"}]},
-{t:"Horarios",f:[
-{k:"hor",l:"Horarios de cada día",h:"Si cerrás al mediodía, anotá los dos tramos",a:1},
-{k:"fer",l:"Feriados",c:["Abro","Cierro","Depende del feriado"]},
-{k:"esp",l:"Fechas especiales",h:"Navidad, Año Nuevo, Día de la Madre, Hot Sale",a:1},
-{k:"cie",l:"Cierres próximos",h:"Vacaciones, obras, balance"}]},
-{t:"Qué ofrecés",f:[
-{k:"desc",l:"Qué hacés y qué te diferencia",h:"Dos o tres frases",a:1},
-{k:"busca",l:"Cómo te buscan tus clientes",h:"Las palabras que usan"},
-{k:"serv",l:"Servicios o productos principales",h:"Con precio o rango",a:1}]},
-{t:"Atributos",f:[
-{k:"acc",l:"Accesibilidad",m:["Entrada accesible","Baño accesible","Estacionamiento accesible","Rampa o ascensor"]},
-{k:"ins",l:"Instalaciones",m:["Wi-Fi","Baño para clientes","Estacionamiento","Aire acondicionado","Espacio al aire libre","Acepta mascotas"]},
-{k:"aten",l:"Atención",m:["Con turno","Sin turno","Delivery","Retiro en el local","A domicilio"]},
-{k:"pago",l:"Medios de pago",m:["Efectivo","Débito","Crédito","Transferencia","QR o Mercado Pago"]}]},
-{t:"Fotos",f:[
-{k:"fot",l:"Lo que ya tenés",h:"Alcanzan unas 6 fotos buenas. Las mandás por el chat.",m:["Logo","Fachada","Interior","Equipo","Productos o trabajos","Entrada","Video corto"]}]},
-{t:"Verificación",f:[
-{k:"gm",l:"Tu Gmail",h:"Va a ser el dueño de la ficha"},
-{k:"llam",l:"Podés recibir una llamada o SMS al verificar",c:["Sí","No"]},
-{k:"vid",l:"Podés hacer una videollamada mostrando el local",c:["Sí","No"]},
-{k:"cart",l:"El cartel coincide con el nombre",c:["Sí","No","No sé"]},
-{k:"comp",l:"Comprobante a nombre del negocio",h:"Factura, habilitación, constancia de ARCA o alquiler"}]},
-{t:"Algo más",f:[{k:"obs",l:"Algo más que quieras contarme",a:1}]}
-];
-var K="vm-relevamiento-v1",S={};
-try{S=JSON.parse(localStorage.getItem(K)||"{}")||{}}catch(e){S={}}
-function sv(){try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}}
-function esc(x){return String(x).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;")}
-function val(f){var v=S[f.k];return Array.isArray(v)?v.join(", "):String(v||"").trim()}
-var h="";
-D.forEach(function(s,i){
-h+='<div class="q-s" data-s="'+i+'"><div class="q-h"><span class="q-bd"></span>'+s.t+'</div>';
-s.f.forEach(function(f){
-var hint=f.h?'<small>'+f.h+'</small>':"";
-if(f.c||f.m){
-h+='<div class="q-f"><span class="q-l">'+f.l+hint+'</span><div class="q-chs">';
-(f.c||f.m).forEach(function(o){h+='<button type="button" class="q-ch" data-k="'+f.k+'" data-v="'+esc(o)+'" data-m="'+(f.m?1:0)+'" aria-pressed="false">'+o+'</button>'});
-h+='</div></div>';
-}else{
-h+='<div class="q-f"><label for="q-'+f.k+'">'+f.l+hint+'</label>'+(f.a?'<textarea id="q-'+f.k+'" data-k="'+f.k+'"></textarea>':'<input id="q-'+f.k+'" data-k="'+f.k+'" autocomplete="off">')+'</div>';
-}});
-h+='</div>';
-});
-var app=document.getElementById("q-app");app.innerHTML=h;
-Array.prototype.forEach.call(app.querySelectorAll("input,textarea"),function(e){e.value=S[e.dataset.k]||""});
-var send=document.getElementById("q-send"),msg=document.getElementById("q-msg"),base=msg.textContent;
-function build(){
-var t="Hola Lucio, quiero que mi negocio aparezca en Google Maps. Estos son los datos de mi negocio:\n";
-D.forEach(function(s){
-var l="";
-s.f.forEach(function(f){var x=val(f);if(x)l+="• "+f.l+": "+x+"\n"});
-if(l)t+="\n*"+s.t+"*\n"+l;
-});
-return t+"\nTe mando las fotos por acá.";
-}
-function missing(){var m=[];D.forEach(function(s){s.f.forEach(function(f){if(f.r&&!val(f))m.push(f)})});return m}
-function ui(){
-Array.prototype.forEach.call(app.querySelectorAll(".q-ch"),function(b){
-var v=S[b.dataset.k];b.setAttribute("aria-pressed",String(b.dataset.m==="1"?(v||[]).indexOf(b.dataset.v)>-1:v===b.dataset.v))});
-D.forEach(function(s,i){
-var req=s.f.filter(function(f){return f.r}),done=req.length?req.every(function(f){return val(f)}):s.f.some(function(f){return val(f)});
-app.querySelector('[data-s="'+i+'"]').classList.toggle("q-done",done);
-});
-send.href="https://wa.me/"+WA+"?text="+encodeURIComponent(build());
-}
-app.addEventListener("input",function(e){var k=e.target.dataset.k;if(k){S[k]=e.target.value;sv();ui()}});
-app.addEventListener("click",function(e){
-var b=e.target.closest(".q-ch");if(!b)return;
-var k=b.dataset.k,v=b.dataset.v;
-if(b.dataset.m==="1"){var a=S[k]||[],j=a.indexOf(v);if(j>-1)a.splice(j,1);else a.push(v);S[k]=a}
-else S[k]=(S[k]===v?"":v);
-sv();ui();
-});
-send.addEventListener("click",function(e){
-var m=missing();
-if(m.length){
-e.preventDefault();
-msg.textContent="Antes de enviar, completá: "+m.map(function(f){return f.l.toLowerCase()}).join(", ")+".";
-var el=document.getElementById("q-"+m[0].k);if(el){el.scrollIntoView({block:"center"});el.focus({preventScroll:true})}
-}else{msg.textContent=base}
-});
-ui();
-})();
-</script>
-<script>
-(function(){
-var sh=document.getElementById("q-sheet"),opener=null;
-var bg=document.querySelectorAll("body>header,body>section,body>footer");
-function setBg(v){Array.prototype.forEach.call(bg,function(e){e.inert=v})}
-function open(el){
-if(sh.classList.contains("on"))return;
-opener=el||null;sh.classList.add("on");sh.setAttribute("aria-hidden","false");
-document.documentElement.classList.add("q-lock");setBg(true);
-try{history.pushState({q:1},"")}catch(e){}
-setTimeout(function(){document.getElementById("q-x").focus({preventScroll:true})},60);
-}
-function hide(){
-if(!sh.classList.contains("on"))return;
-sh.classList.remove("on");sh.setAttribute("aria-hidden","true");
-document.documentElement.classList.remove("q-lock");setBg(false);
-if(opener&&opener.focus)opener.focus({preventScroll:true});
-}
-function close(){if(history.state&&history.state.q){history.back()}else{hide()}}
-document.addEventListener("click",function(e){var a=e.target.closest("[data-q]");if(a){e.preventDefault();open(a)}});
-document.getElementById("q-x").addEventListener("click",close);
-document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
-window.addEventListener("popstate",hide);
-})();
-</script>
+<script src="js/reveal.js"></script>
+<script src="js/form.js"></script>
+<script src="js/sheet.js"></script>
 </body>
 </html>
