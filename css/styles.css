@@ -114,3 +114,32 @@ html.q-lock,html.q-lock body{overflow:hidden}
 .q-foot .btn{margin:0;display:block;text-align:center;width:100%}
 .q-foot p{margin:8px 0 0;font-size:12.5px;color:var(--mute)}
 @media (prefers-reduced-motion:reduce){.q-sheet{transition:none}}
+
+/* estrellas que se rellenan */
+.stars{display:inline-flex;gap:.12em;margin-left:.4em;vertical-align:-.08em}
+.st{position:relative;display:inline-block;width:.82em;height:.82em}
+.st svg{display:block;width:100%;height:100%}
+.st .bg{fill:var(--mute);opacity:.3}
+.st .fl{position:absolute;inset:0;fill:#fbbc04;clip-path:inset(0 100% 0 0)}
+.rv.in .st .fl{clip-path:inset(0 0 0 0);transition:clip-path .22s ease-out}
+.st:nth-child(1) .fl{transition-delay:.25s}
+.st:nth-child(2) .fl{transition-delay:.38s}
+.st:nth-child(3) .fl{transition-delay:.51s}
+.st:nth-child(4) .fl{transition-delay:.64s}
+.st:nth-child(5) .fl{transition-delay:.77s}
+html:not(.js) .st .fl{clip-path:none}
+@media (prefers-reduced-motion:reduce){.st .fl{clip-path:inset(0 0 0 0);transition:none}}
+
+/* servicio y proceso en un solo slide */
+.duo{display:grid;gap:40px}
+@media (min-width:760px){.duo{grid-template-columns:1fr 1fr;gap:56px}}
+.steps{list-style:none;padding:0;margin:0}
+.steps li{display:grid;grid-template-columns:30px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.steps li:first-child{border-top:1px solid var(--line)}
+.steps .n{font-size:12px;letter-spacing:.1em;color:var(--mute);padding-top:3px}
+.steps b{font-weight:600}
+.steps p{margin:2px 0 0;font-size:15px}
+.duo h3{margin-bottom:12px}
+
+/* simbolo del precio separado del numero */
+.price .big .cur{margin-right:.1em}
