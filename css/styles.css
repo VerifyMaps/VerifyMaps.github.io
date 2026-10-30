@@ -36,7 +36,7 @@ ul.ck{list-style:none;padding:0;margin:0}
 ul.ck li{padding:14px 0;border-bottom:1px solid var(--line)}
 ul.ck li:first-child{border-top:1px solid var(--line)}
 .price{border:1px solid var(--ink);padding:40px 28px}
-.price .big{font-size:clamp(44px,12vw,76px);font-weight:500;letter-spacing:-.04em;line-height:1;margin:8px 0 16px}
+.price .big{font-size:clamp(38px,10.2vw,76px);font-weight:500;letter-spacing:-.04em;line-height:1;margin:8px 0 16px}
 .price .big small{font-size:.4em;letter-spacing:-.02em;color:var(--mute);font-weight:400;white-space:nowrap}
 .line{padding:10px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;font-size:15px}
 .line span:first-child{color:var(--mute)}
@@ -142,3 +142,7 @@ html:not(.js) .st .fl{clip-path:none}
 
 /* simbolo del precio separado del numero */
 .price .big .cur{margin-right:.1em}
+
+/* titulo equilibrado en pantallas angostas */
+h1{text-wrap:balance}
+@media (max-width:340px){h1{font-size:30px}}
