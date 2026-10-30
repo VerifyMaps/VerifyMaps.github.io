@@ -4,41 +4,21 @@ var D=[
 {t:"Tu negocio",f:[
 {k:"nombre",l:"Nombre exacto",h:"Como figura en el cartel, sin eslóganes ni teléfonos",r:1},
 {k:"rubro",l:"Rubro principal",h:"Por ejemplo: peluquería, taller, veterinaria",r:1},
-{k:"otras",l:"Otras categorías o servicios",h:"Hasta 2 o 3"},
-{k:"tipo",l:"Tipo de atención",c:["Local al público","A domicilio","Ambas"]},
-{k:"desde",l:"Abierto desde",h:"Mes y año"}]},
+{k:"tipo",l:"Tipo de atención",c:["Local al público","A domicilio","Ambas"]}]},
 {t:"Ubicación",f:[
-{k:"dir",l:"Dirección completa",h:"Calle, número, piso o local, barrio, localidad y código postal",r:1},
-{k:"ref",l:"Referencias para llegar",h:"Entre calles, frente a, dentro de una galería"},
-{k:"zona",l:"Zona que cubrís",h:"Solo si vas a domicilio"}]},
+{k:"dir",l:"Dirección completa",h:"Calle, número, piso o local, barrio, localidad y código postal",r:1}]},
 {t:"Contacto",f:[
 {k:"tel",v:"tel",l:"Teléfono del negocio",h:"Con característica",r:1},
-{k:"wa",v:"tel",l:"WhatsApp del negocio"},
-{k:"web",v:"web",l:"Sitio web o redes"},
-{k:"mail",v:"mail",l:"Email"}]},
+{k:"web",v:"web",l:"Sitio web o redes",h:"Si tenés"}]},
 {t:"Horarios",f:[
-{k:"hor",l:"Horarios de cada día",h:"Si cerrás al mediodía, anotá los dos tramos",a:1},
-{k:"fer",l:"Feriados",c:["Abro","Cierro","Depende del feriado"]},
-{k:"esp",l:"Fechas especiales",h:"Navidad, Año Nuevo, Día de la Madre, Hot Sale",a:1},
-{k:"cie",l:"Cierres próximos",h:"Vacaciones, obras, balance"}]},
+{k:"hor",l:"Horarios",h:"Días y horas. Sumá feriados o fechas especiales si cambian.",a:1}]},
 {t:"Qué ofrecés",f:[
-{k:"desc",l:"Qué hacés y qué te diferencia",h:"Dos o tres frases",a:1},
-{k:"busca",l:"Cómo te buscan tus clientes",h:"Las palabras que usan"},
-{k:"serv",l:"Servicios o productos principales",h:"Con precio o rango",a:1}]},
-{t:"Atributos",f:[
-{k:"acc",l:"Accesibilidad",m:["Entrada accesible","Baño accesible","Estacionamiento accesible","Rampa o ascensor"]},
-{k:"ins",l:"Instalaciones",m:["Wi-Fi","Baño para clientes","Estacionamiento","Aire acondicionado","Espacio al aire libre","Acepta mascotas"]},
-{k:"aten",l:"Atención",m:["Con turno","Sin turno","Delivery","Retiro en el local","A domicilio"]},
-{k:"pago",l:"Medios de pago",m:["Efectivo","Débito","Crédito","Transferencia","QR o Mercado Pago"]}]},
+{k:"desc",l:"Qué hacés y tus servicios principales",h:"Dos o tres frases",a:1}]},
+{t:"Detalles",f:[
+{k:"ins",l:"Instalaciones",m:["Wi-Fi","Entrada accesible","Baño accesible","Estacionamiento","Acepta mascotas"]},
+{k:"pago",l:"Medios de pago",m:["Efectivo","Débito o crédito","Transferencia","QR o Mercado Pago"]}]},
 {t:"Fotos",f:[
-{k:"fot",l:"Lo que ya tenés",h:"Alcanzan unas 6 fotos buenas. Las mandás por el chat.",m:["Logo","Fachada","Interior","Equipo","Productos o trabajos","Entrada","Video corto"]}]},
-{t:"Verificación",f:[
-{k:"gm",v:"mail",l:"Tu Gmail",h:"Va a ser el dueño de la ficha"},
-{k:"llam",l:"Podés recibir una llamada o SMS al verificar",c:["Sí","No"]},
-{k:"vid",l:"Podés hacer una videollamada mostrando el local",c:["Sí","No"]},
-{k:"cart",l:"El cartel coincide con el nombre",c:["Sí","No","No sé"]},
-{k:"comp",l:"Comprobante a nombre del negocio",h:"Factura, habilitación, constancia de ARCA o alquiler"}]},
-{t:"Algo más",f:[{k:"obs",l:"Algo más que quieras contarme",a:1}]}
+{k:"fot",l:"Lo que ya tenés",h:"Alcanzan unas 6 fotos buenas. Las mandás por el chat.",m:["Logo","Fachada","Interior","Equipo","Productos o trabajos"]}]}
 ];
 var K="vm-relevamiento-v2",OLD="vm-relevamiento-v1",TTL=2*3600*1000,MAXI=200,MAXT=500,MAXMSG=3500,S={};
 var F={};D.forEach(function(s){s.f.forEach(function(f){F[f.k]=f})});
