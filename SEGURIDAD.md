@@ -19,8 +19,8 @@ Alcance: el único archivo recibido (`index.html`). No tuve acceso al repositori
 El mensaje es texto prellenado en `wa.me`: lo ve WhatsApp, el historial del navegador y, luego, Lucio. No pasa por ningún servidor propio.
 
 - **Necesarios para empezar**: nombre, rubro, dirección, teléfono (ya son obligatorios).
-- **Útiles pero no imprescindibles en el primer mensaje**: horarios, descripción, servicios, atributos, WhatsApp/web/email del negocio.
-- **Candidatos a pedir por el chat y no en el formulario** (decisión tuya, no los quité para no cambiar la funcionalidad): **Gmail personal** (`gm`), **comprobante** (`comp`) y las respuestas sobre llamada/videollamada de verificación. Son los más sensibles y solo hacen falta cuando se llega a la verificación.
+- **Útiles pero no imprescindibles en el primer mensaje**: horarios, descripción, servicios, atributos, web o redes del negocio.
+- **Resuelto**: el formulario ya no pide Gmail, comprobante, ni los datos de verificación; esos datos se piden por el chat de WhatsApp solo cuando hacen falta, y el formulario se resumió a lo esencial.
 
 ## 3. Límites que no se pueden resolver desde GitHub Pages
 
@@ -53,4 +53,4 @@ Nota: `tests/`, `package.json` y `.github/` también se publican en Pages si se 
 
 ## 6. Pendiente de tu aprobación
 
-Probar la página en un navegador real (la CSP se verificó por análisis y pruebas, no con DevTools), decidir sobre el punto 2 (Gmail/comprobante), hacer el PR y recién ahí publicar.
+Probar la página en un navegador real (la CSP se verificó por análisis y pruebas, no con DevTools), el punto 2 (Gmail/comprobante) ya está resuelto: el formulario no los pide, hacer el PR y recién ahí publicar.
