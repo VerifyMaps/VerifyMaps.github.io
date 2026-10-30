@@ -50,26 +50,26 @@ test("Con los datos obligatorios correctos el enlace de WhatsApp se arma y no se
 test("Faltan obligatorios → se bloquea el envío",async()=>{
   const w=await page();type(w,"nombre","Solo nombre");assert.equal(click(w).defaultPrevented,true);
 });
-test("Formatos inválidos (teléfono, email) bloquean el envío",async()=>{
+test("Formatos inválidos (teléfono, web) bloquean el envío",async()=>{
   const w=await page();fill(w);type(w,"tel","abc");assert.equal(click(w).defaultPrevented,true);
-  type(w,"tel","11 2345-6789");type(w,"mail","no-es-mail");assert.equal(click(w).defaultPrevented,true);
-  type(w,"mail","hola@ejemplo.com");type(w,"web","javascript:alert(1)");assert.equal(click(w).defaultPrevented,true);
+  type(w,"tel","11 2345-6789");type(w,"web","javascript:alert(1)");assert.equal(click(w).defaultPrevented,true);
   type(w,"web","https://ejemplo.com");assert.equal(click(w).defaultPrevented,false);
 });
 test("Inyección: HTML, '&text=', saltos de línea y caracteres de control quedan como texto inerte",async()=>{
   const w=await page();fill(w);
   type(w,"nombre",'<img src=x onerror=alert(1)>&text=X&phone=1');
-  type(w,"obs","línea1\n• Teléfono: 000\u202Eoculto\u0000fin");
+  type(w,"desc","línea1\n• Teléfono: 000\u202Eoculto\u0000fin");
   assert.equal(w.document.querySelector("#q-app img"),null);
   const t=text(w);assert.ok(t.includes("<img src=x onerror=alert(1)>&text=X&phone=1"));
   assert.ok(!/\u202E|\u0000/.test(t));assert.ok(!t.includes("\n• Teléfono: 000"),"un salto de línea no debe poder simular otro campo");
   assert.deepEqual([...new URL(w.document.getElementById("q-send").href).searchParams.keys()],["text"]);
 });
-test("Mensaje demasiado largo → se bloquea con aviso",async()=>{
+test("Con todos los campos al máximo el mensaje sigue dentro del límite de WhatsApp",async()=>{
   const w=await page();fill(w);
-  for(const k of ["hor","esp","desc","serv","obs","ref"])type(w,k,"x ".repeat(400));
-  for(const k of ["otras","zona","busca","cie","web","comp"])type(w,k,"y".repeat(200));
-  assert.equal(click(w).defaultPrevented,true);assert.match(w.document.getElementById("q-msg").textContent,/demasiado largo/);
+  for(const k of ["hor","desc"])type(w,k,"x ".repeat(400));
+  for(const k of ["nombre","rubro","dir","web"])type(w,k,"y".repeat(200));
+  for(const b of w.document.querySelectorAll(".q-ch"))b.click();
+  assert.ok(text(w).length<=3500);assert.equal(click(w).defaultPrevented,false);
 });
 test("Privacidad: no usa localStorage, el borrador va a sessionStorage y 'Borrar mis datos' lo elimina",async()=>{
   const w=await page();fill(w);
